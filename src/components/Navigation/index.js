@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Navigation(props) {
-        const {
+    const {
           someProjects = [],
           setCurrentProject,
           currentProject,
-        } = props;
+    } = props;
+
+    useEffect(() => {
+            document.title = capitalizeFirstLetter(currentProject.name);
+        }, [currentProject]);
 
     return (
         <header className="flex-row px-1">
@@ -33,10 +38,10 @@ function Navigation(props) {
               >
                 <span
                   onClick={() => {
-                    setCurrentCategory(category)
+                    setCurrentProject(Project)
                   }}
                 >
-                  {capitalizeFirstLetter(category.name)}
+                  {capitalizeFirstLetter(Project.name)}
                 </span>
               </li>
             ))}

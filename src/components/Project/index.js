@@ -1,7 +1,7 @@
 import React from 'react';
 import photo from "../../extras/imgs/tech-blog.png";
 
-function Projects(props) {
+function Project(props) {
     const currentProject = {
         name: "Personal Crypto Tracker",
         description:
@@ -23,4 +23,4 @@ function Projects(props) {
 }
 
 
-export default Projects;
+export default Project;
