@@ -24,23 +24,24 @@ function Navigation(props) {
         <nav>
           <ul className="flex-row">
             <li className="mx-2">
-              <a data-testid="about" href="#about">
+            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
                 Origin Story
               </a>
             </li>
-            <li className="mx-2">
-              <span>Where to Find Me</span>
+            <li className={`mx-2 ${contactSelected && 'navActive'}`}>
+            <span onClick={() => setContactSelected(true)}>Where to Find Me</span>
             </li>
             {someProjects.map((Project) => (
               <li
                 className={`mx-1 ${
-                  currentProject.name === Project.name && 'navActive'
-                  }`}
+                  currentProject.name === Project.name && !contactSelected && `navActive`
+                }`}
                 key={Project.name}
               >
                 <span
                   onClick={() => {
                     setCurrentProject(Project)
+                    setContactSelected(false);
                   }}
                 >
                   {capitalizeFirstLetter(Project.name)}
