@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import React, { useState } from 'react';
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+// import Header from "./components/Header";
+// import Footer from "./components/Footer";
 import Navigation from './components/Navigation';
 import Projects from "./components/Project";
 import './App.css';
@@ -21,7 +21,7 @@ const [currentProject, setCurrentProject] = useState(someProjects[0]);
   return (
     
       <div>
-        <Header></Header>
+        {/* <Header></Header> */}
         <Navigation
         someProjects={someProjects}
         setCurrentProject={setCurrentProject}
@@ -29,7 +29,7 @@ const [currentProject, setCurrentProject] = useState(someProjects[0]);
       ></Navigation>
         <main>
           <Projects></Projects>
-          <Footer></Footer>
+          {/* <Footer></Footer> */}
         </main>
       </div>
     );

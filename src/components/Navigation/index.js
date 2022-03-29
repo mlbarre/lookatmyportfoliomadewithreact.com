@@ -16,18 +16,18 @@ function Navigation(props) {
         <header className="flex-row px-1">
         <h2>
           <a data-testid="link" href="/">
-            <span role="img" aria-label="camera"> 📸</span> Oh Snap!
+            <span role="img" aria-label="camera"> 📸</span> mlbarre
           </a>
         </h2>
         <nav>
           <ul className="flex-row">
             <li className="mx-2">
               <a data-testid="about" href="#about">
-                About me
+                Origin Story
               </a>
             </li>
             <li className="mx-2">
-              <span>Contact</span>
+              <span>Where to Find Me</span>
             </li>
             {someProjects.map((Project) => (
               <li
