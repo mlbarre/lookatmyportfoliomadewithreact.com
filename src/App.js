@@ -1,4 +1,6 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import React from 'react';
+import Nav from './components/Nav';
 import './App.css';
 
 function App() {
