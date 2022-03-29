@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 // import Footer from "./components/Footer";
 import Navigation from './components/Navigation';
 import Projects from "./components/Project";
+import ContactForm from "./components/Contact";
 import './App.css';
 
 function App() {
@@ -28,7 +29,8 @@ const [currentProject, setCurrentProject] = useState(someProjects[0]);
         currentProject={currentProject}
       ></Navigation>
         <main>
-          <Projects></Projects>
+          <Projects currentProject={currentProject}></Projects>
+          <ContactForm></ContactForm>
           {/* <Footer></Footer> */}
         </main>
       </div>
