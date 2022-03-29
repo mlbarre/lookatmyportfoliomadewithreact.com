@@ -7,6 +7,7 @@ import Projects from "./components/Project";
 import ContactForm from "./components/Contact";
 import './App.css';
 
+
 function App() {
   const [someProjects] = useState([
     {
@@ -18,6 +19,7 @@ function App() {
     }
 ]);
 const [currentProject, setCurrentProject] = useState(someProjects[0]);
+const [contactSelected, setContactSelected] = useState(false);
 
   return (
     
@@ -27,10 +29,17 @@ const [currentProject, setCurrentProject] = useState(someProjects[0]);
         someProjects={someProjects}
         setCurrentProject={setCurrentProject}
         currentProject={currentProject}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
       ></Navigation>
         <main>
+        {!contactSelected ? (
+          <>
           <Projects currentProject={currentProject}></Projects>
+          </>
+          ) : (
           <ContactForm></ContactForm>
+          )}
           {/* <Footer></Footer> */}
         </main>
       </div>

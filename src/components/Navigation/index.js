@@ -6,6 +6,8 @@ function Navigation(props) {
           someProjects = [],
           setCurrentProject,
           currentProject,
+          contactSelected,
+          setContactSelected
     } = props;
 
     useEffect(() => {
