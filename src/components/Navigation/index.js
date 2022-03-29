@@ -1,37 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function Navigation() {
+function Navigation(props) {
+        const {
+          someProjects = [],
+          setCurrentProject,
+          currentProject,
+        } = props;
 
     return (
-    <header className="flex-row px-1">
+        <header className="flex-row px-1">
         <h2>
-        <a data-testid="link" href="/">
+          <a data-testid="link" href="/">
             <span role="img" aria-label="camera"> 📸</span> Oh Snap!
-            </a>
+          </a>
         </h2>
         <nav>
-            <ul className="flex-row">
-                <li className="mx-2">
-                <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
-                        Origin Story
-                    </a>
-                </li>
-                <li className="mx-2">
-                    <a href="#portfolio">
-                        Projects
-                    </a>
-                </li>
-                <li className="mx-2">
-                    <a href="#resume">
-                        Cover Letters
-                    </a>
-                </li>
-                <li>
-                <span onClick={() => setContactSelected(true)}>Where to Find Me</span>
-                </li>
-            </ul>
+          <ul className="flex-row">
+            <li className="mx-2">
+              <a data-testid="about" href="#about">
+                About me
+              </a>
+            </li>
+            <li className="mx-2">
+              <span>Contact</span>
+            </li>
+            {someProjects.map((Project) => (
+              <li
+                className={`mx-1 ${
+                  currentProject.name === Project.name && 'navActive'
+                  }`}
+                key={Project.name}
+              >
+                <span
+                  onClick={() => {
+                    setCurrentCategory(category)
+                  }}
+                >
+                  {capitalizeFirstLetter(category.name)}
+                </span>
+              </li>
+            ))}
+          </ul>
         </nav>
-    </header>
+      </header>
     );
 }
   
