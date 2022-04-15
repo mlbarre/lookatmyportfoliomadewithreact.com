@@ -3,15 +3,15 @@ import './App.css';
 // import ProjectContainer from '../components/ProjectContainer.js';
 import Nav from './components/Nav';
 import ListofProjects from './components/ListofProjects';
-// import Header from './components/Header';
-// import Footer from './components/Footer';
+import TopofPage from './components/TopofPage';
+import Footer from './components/Footer.js';
 
 
 function App() {
 
   return (
     <main>
-      <Header />
+      <TopofPage />
         <Nav />
           <ListofProjects />
       <Footer />

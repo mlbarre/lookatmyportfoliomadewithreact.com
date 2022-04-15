@@ -1,8 +1,8 @@
 import React from 'react';
 import { Menu, Container } from 'semantic-ui-react';
 
-import About from './pages/About.js';
-import Contact from './pages/Contact.js';
+import About from '../pages/About.js';
+import Contact from '../pages/Contact.js';
 
 const Nav = () => {
     return (
