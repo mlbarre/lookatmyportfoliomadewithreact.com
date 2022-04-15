@@ -1,6 +1,8 @@
 import React from 'react';
 import ProjectContainer from './ProjectContainer';
-import Grid from 'semantic-ui-react';
+import { Grid }  from 'semantic-ui-css';
+// import TopofPage from './TopofPage';
+// import Footer from './Footer';
 
 
 const ListofProjects = () => {

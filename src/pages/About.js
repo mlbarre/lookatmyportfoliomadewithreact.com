@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Header, Image, Icon } from 'semantic-ui-react';
 
-import TopofPage from './components/TopofPage.js';
-
+import TopofPage from '../components/TopofPage.js';
+import Footer from '../components/Footer.js'
 
 const About = () => {
     return (
@@ -29,6 +29,7 @@ const About = () => {
       Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
         </p>
         </Container>
+        <Footer />
     </div>
     )
 }

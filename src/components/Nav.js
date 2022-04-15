@@ -3,6 +3,8 @@ import { Menu, Container } from 'semantic-ui-react';
 
 import About from '../pages/About.js';
 import Contact from '../pages/Contact.js';
+// import Footer from './Footer.js';
+// import TopofPage from './TopofPage.js';
 
 const Nav = () => {
     return (
